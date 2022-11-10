@@ -1,0 +1,103 @@
+/*-----
+Reset
+-----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    height: 60%;
+    width: 90%;
+}
+
+.container .displayed{
+    position: relative;
+    width: 80%;
+    height: 100%;
+}
+
+.container .displayed-image {
+    position: absolute;
+    inset: 0;
+    display: none;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container .preview{
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+
+.container .preview-image {
+    display: block;
+    min-height: 0;
+    height: 20%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(60%);
+}
+
+.displayed .photo-info {
+    display: none;
+    text-align: end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.125rem;
+    z-index: 1;
+}
+  
+.displayed .photo-info.active {
+    display: flex;
+    flex-direction: column;
+}
+  
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    inset: 0;
+    z-index: 99;
+}
+
+#up{
+    margin-top: 15px;
+}
+
+#down{
+    margin-bottom: 15px;
+}
+
+.container .displayed-image.active {
+    display: block;
+}
+  
+.container .preview-image.active {
+    border: 2px solid white;
+    filter: brightness(1);
+}
+
+
+
